@@ -13,34 +13,120 @@
 /* Super Largos (Telas maiores laptops, desktops e até TVs, 1200px para cima) */
 /*@media only screen and (min-width: 1200px) {...}*/
 
+/* Fontes de Texto  */
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+
+/* Variáveis  */
 :root{
-     ---main-title: #B20D30;
+     ---main-title: #FF0035;
      ---main-text: white;
-     ---main-hover:gray;
+     ---main-hover:rgb(68, 68, 68);
      --main-bg: #070600;
 }
+
+
+
 body{
-    background-color:var(--main-bg) ;
-}
+    padding-left:60px;
+    padding-right: 60px;
+    background-color: var(--main-bg);
+} 
 header{
-    z-index: none;
+    z-index: 99;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    position: fixed;
 }
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left:30px;
-    padding-right: 30px;
+    padding-left:60px;
+    padding-right: 60px;
+    
 }
 .menu{
     display: flex;
-    gap: 50px;
+    gap: 30px;
+    align-items: center;
 } 
+.Hero .Hero-Title{
+  font-size: 70px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); /* ✅ funciona */
+   
+
+
+}
 
 h1{
     color:var(---main-title) ;
+    font-family: "RocknRoll One", sans-serif;
+
 }
+a, p{
+ font-family: "Noto Sans JP", sans-serif;
+ color: var(---main-text);
+ text-decoration: none;
+}
+main{
+    padding-top: 70px;
+    display: grid;
+    grid-template-rows: 500px 400px 300px;
+    height: 100%;
+}
+
+.button{
+    border-radius: 5px;
+    padding: 12px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: var(---main-title);
+    transition: background-color 0.1s ease;
+}
+
+.button:hover{
+    background-color: #E6002E;
+}
+.menu a:not(:last-child):hover{
+    background-color: var(---main-hover);
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.menu a:not(:last-child){
+   padding: 12px; 
+   border-radius: 5px;
+   transition: background-color 0.3s ease-in;
+}
+.To-do{
+    text-align: left;
+    position: left;
+}
+.Hero{
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: center;
+}
+.card-imgs{
+    max-width: 200px;
+    height: 300px;
+
+}
+.Datas{
+    display: flex;
+    gap: 20px;
+}
+.cards{
+    display: flex;
+    gap: 40px;
+}
+.To-do-Title{
+   margin-bottom: 50px;
+}
+
