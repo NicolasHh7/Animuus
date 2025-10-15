@@ -24,12 +24,15 @@
      ---main-hover:rgb(68, 68, 68);
      --main-bg: #070600;
 }
+html{
+    scrollbar-color: var(---main-hover) var(--main-bg) ;
+}
+*{
+ padding: 0px;
+ margin: 0px;
 
-
-
+}
 body{
-    padding-left:60px;
-    padding-right: 60px;
     background-color: var(--main-bg);
 } 
 header{
@@ -39,15 +42,24 @@ header{
     left: 0;
     right: 0;
     position: fixed;
+    background: blur;
+
 }
 .header{
     display: flex;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     justify-content: space-between;
-    padding-left:60px;
-    padding-right: 60px;
-    
+    padding-top: 20px;
+    padding-left:30px;
+    padding-right: 30px;
+    backdrop-filter: blur(5px);
+    background-color: var(--main-bg); 
 }
+
+
+
 .menu{
     display: flex;
     gap: 30px;
@@ -55,10 +67,7 @@ header{
 } 
 .Hero .Hero-Title{
   font-size: 70px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); /* ✅ funciona */
-   
-
-
+   text-shadow: 0.1em 0.1em #ffffff;
 }
 
 h1{
@@ -76,6 +85,8 @@ main{
     display: grid;
     grid-template-rows: 500px 400px 300px;
     height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .button{
@@ -103,21 +114,18 @@ main{
    transition: background-color 0.3s ease-in;
 }
 .To-do{
+    padding-top: 50px ;
     text-align: left;
     position: left;
 }
 .Hero{
-    padding-top: 20px;
+    padding-top: 80px;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: center;
 }
-.card-imgs{
-    max-width: 200px;
-    height: 300px;
 
-}
 .Datas{
     display: flex;
     gap: 20px;
@@ -125,8 +133,33 @@ main{
 .cards{
     display: flex;
     gap: 40px;
+    overflow: visible;
 }
 .To-do-Title{
-   margin-bottom: 50px;
+   margin-bottom: 30px;
 }
 
+.card{
+    transition: transform 0.3s ease ;
+    cursor: pointer;
+     z-index: 10; 
+}
+.card:hover{
+    transform: scale(1.1);
+}
+footer{
+    padding: 20px;
+    background-color: var(---main-text);
+    color: var(--main-bg);
+    border-style: solid;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-color: var(---main-title);
+    text-align: center;
+}
+footer p{
+    font-weight: bold;
+  color: var(--main-bg);
+  margin-bottom: 10px;
+}
